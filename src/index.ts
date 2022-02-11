@@ -1,14 +1,17 @@
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import morgan from 'morgan';
 
 import routerUser from './routes/user';
 
 const app = express();
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
 app.listen(80, () => console.log('监听80'));
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(morgan('dev')); // 默认日志组件morgan
+
+app.use(morgan('short', {stream: accessLogStream}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
