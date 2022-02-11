@@ -133,7 +133,7 @@ module.exports = {
         'brace-style': [1, '1tbs'], //大括号风格
         'callback-return': 1, //避免多次调用回调什么的
         'camelcase': 2, //强制驼峰法命名
-        'comma-dangle': [2, 'never'], //对象字面量项尾不能有逗号
+        'comma-dangle': [0, 'never'], //对象字面量项尾不能有逗号
         'comma-spacing': 0, //逗号前后的空格
         'comma-style': [2, 'last'], //逗号风格，换行时在行首还是行尾
         'complexity': [0, 11], //循环复杂度
@@ -162,7 +162,6 @@ module.exports = {
         'max-nested-callbacks': [0, 2], //回调嵌套深度
         'max-params': [0, 3], //函数最多只能有3个参数
         'max-statements': [0, 10], //函数内最多有几个声明
-        'new-cap': 2, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
         'new-parens': 2, //new时必须加小括号
         'newline-after-var': 2, //变量声明后是否需要空一行
         'object-curly-spacing': [0, 'never'], //大括号内是否允许不必要的空格
@@ -174,7 +173,7 @@ module.exports = {
         'prefer-spread': 0, //首选展开运算
         'prefer-reflect': 0, //首选Reflect的方法
         'quotes': [1, 'single'], //引号类型 `` '' ''
-        'quote-props': [2, 'always'], //对象字面量中的属性名是否强制双引号
+        'quote-props': [0, 'always'], //对象字面量中的属性名是否强制双引号
         'radix': 2, //parseInt必须指定第二个参数
         'id-match': 0, //命名检测
         'require-yield': 0, //生成器函数必须有yield
