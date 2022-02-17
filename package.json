@@ -25,6 +25,7 @@
     "@types/express": "^4.17.13",
     "@types/morgan": "^1.9.3",
     "express": "^4.17.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pkg": "^5.5.2"
   }
 }

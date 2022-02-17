@@ -3,12 +3,13 @@ import path from 'path';
 import fs from 'fs';
 import morgan from 'morgan';
 
+import config from './config/index';
 import routerUser from './routes/user';
 
 const app = express();
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'});
 
-app.listen(80, () => console.log('监听80'));
+app.listen(config.serverListen, () => console.log(`开始监听端口：${config.serverListen}`));
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use(morgan('short', {stream: accessLogStream}));
